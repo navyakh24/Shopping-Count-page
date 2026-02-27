@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>shopping card counter</title>
+
+<style>
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#89f7fe,#66a6ff);
+    text-align:center;
+    margin:0;
+    padding:0;
+}
+
+h2{
+    background:white;
+    padding:15px;
+    margin:0;
+    box-shadow:0 2px 10px rgba(0,0,0,0.2);
+}
+
+#cartBox{
+    background:white;
+    display:inline-block;
+    padding:15px 30px;
+    margin:20px;
+    border-radius:15px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    font-size:20px;
+    font-weight:bolder;
+}
+
+.product{
+    background:white;
+    width:250px;
+    margin:20px auto;
+    padding:20px;
+    border-radius:25px;
+    box-shadow:0 4px 15px rgba(0,0,0,0.2);
+    transition:transform .2s;
+}
+
+.product:hover{
+    transform:scale(1.05);
+}
+
+button{
+    background:#4CAF50;
+    color:white;
+    border: none;
+    padding:10px 20px;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+button:hover{
+    background:#102419;
+    transform:scale(1.09);
+}
+
+hr{
+    border:none;
+    height:2px;
+    background:white;
+    width:80%;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Shopping Card Counter</h2>
+
+<div id="cartBox">
+Cart Items: <span id="cartCount">0</span>
+</div>
+
+<hr>
+
+<div class="product">
+<h4>Product 1 - Shoes</h4>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div class="product">
+<h4>Product 2 - Jeans</h4>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div class="product">
+<h4>Product 3 - T-shirt</h4>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<div class="product">
+<h4>Product 4 - Shorts</h4>
+<button onclick="addToCart()">Add to Cart</button>
+</div>
+
+<script>
+let count=0;
+function addToCart(){
+    count++;
+    document.getElementById("cartCount").innerText=count;
+}
+</script>
+
+</body>
+</html>
+    
